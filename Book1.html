@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(45deg,#eddfeb,#f5b5f6,#f1d48f,#f6b7d6,#c6ddd8,#87f4b6);
+            background-size: 300% 300%;
+            animation: bgcolor 3s infinite;
+        }
+        @keyframes bgcolor {
+            0%, 50% { background-position: 100% 50%; }
+            100% { background-position: 0 50%; }
+        }
+        .container-custom {
+            max-width: 90%;
+            width: 500px;
+            background-color: rgb(255, 250, 219);
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px solid black;
+            margin: 40px auto; /* Adds margin around */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        .feedback-box {
+            background-color: gainsboro;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            width: 100%;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            font-size: 24px;
+            cursor: pointer;
+            color: gray;
+        }
+        .rating input:checked ~ label {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="bg-dark text-white text-center  w-100">BOOK SHOWCASE: BOOK 3 DETAILS
+    </h1>
+    <h2 style="background-color: #f1aa6d; padding-left: 0px; font-size: 20px;"  ><a href="index.html">HOME</a></h2>
+
+    <div class="container-custom">
+        <h4 class="text-center">Book 1: Exploring Mathematics</h4>
+
+        <img src="public/image/maths 10.jpeg" alt="Book Image">
+
+        <details><summary>Class</summary><p>10th Board students</p></details>
+        <details><summary>Publisher</summary><p>National Council of Education Research and Training (2014)</p></details>
+        <details><summary>Language</summary><p>English</p></details>
+        <details><summary>Paperback</summary><p>364 pages</p></details>
+        <details><summary>ISBN-13</summary><p>978-8174506344</p></details>
+        <details><summary>Dimension</summary><p>21.5 x 14 x 1.6 cm</p></details>
+        <details><summary>Country of Origin</summary><p>India</p></details>
+        <details><summary>Best Sellers Rank</summary><p>#866 in Books</p></details>
+        <details>
+            <summary>Purchase links</summary>
+            <p><a href="https://www.amazon.in/NCERT-Mathematics-Textbook-Class-12/dp/B0D87MP79T/ref=asc_df_B0D87MP79T/?tag=googleshopdes-21&linkCode=df0&hvadid=710067558379&hvpos=&hvnetw=g&hvrand=2993687492338920193&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061994&hvtargid=pla-2357885137423&psc=1&mcid=aaba2e9ead9b3e9e97f0e93db8d32d10&tag=googleshopdes-21&linkCode=df0&hvadid=710067558379&hvpos=&hvnetw=g&hvrand=2993687492338920193&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061994&hvtargid=pla-2357885137423&psc=1&gad_source=1">AMAZON</a></p>
+            <p><a href="https://www.flipkart.com/ncert-book-mathematics-textbook-class-x-10th/p/itmb850c634d1942?pid=9789354707575&lid=LSTBOK9789354707575JTWGM5&marketplace=FLIPKART&cmpid=content_book_21402674096_x_8965229628_gmc_pla&tgi=sem,1,G,11214002,x,,,,,,,c,,,,,,,&&cmpid=content_21402674096_gmc_pla&gad_source=1&gclid=Cj0KCQjw7dm-BhCoARIsALFk4v-CAnYvX6s2zdAA3pu5McSEBknT6gR5M4rHlD333yB5Wu1a1tWrBvMaAphhEALw_wcB">FLIPKART</a></p>
+        </details>
+
+        
+        <div class="feedback-box">
+            <h5 class="text-center">Give Your Feedback</h5>
+            <form>
+                <div class="mb-2">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-2">
+                    <label for="feedback" class="form-label">Feedback:</label>
+                    <textarea class="form-control" id="feedback" rows="3" placeholder="Enter your feedback" required></textarea>
+                </div>
+
+                
+                <div class="text-center">
+                    <label class="form-label">Rate this Book:</label>
+                    <div class="rating">
+                        <input type="radio" name="star" id="star5"><label for="star5">★</label>
+                        <input type="radio" name="star" id="star4"><label for="star4">★</label>
+                        <input type="radio" name="star" id="star3"><label for="star3">★</label>
+                        <input type="radio" name="star" id="star2"><label for="star2">★</label>
+                        <input type="radio" name="star" id="star1"><label for="star1">★</label>
+                    </div>
+                </div>
+
+                <button type="submit">SEND FEEDBACK</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-3 w-100">
+        @ 2025 Book Showcase | All rights reserved
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
